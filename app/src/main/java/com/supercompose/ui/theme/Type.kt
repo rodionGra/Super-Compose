@@ -1,4 +1,4 @@
-package com.supercompose.ui.theme
+package com.tutorial.supercompose.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
