@@ -83,3 +83,14 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# custom
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.kotlintest
+*.icloud
+cache
