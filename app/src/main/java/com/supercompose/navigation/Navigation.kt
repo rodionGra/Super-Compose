@@ -12,6 +12,8 @@ import androidx.navigation.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.supercompose.simple.ImageCardScreen
+import com.supercompose.simple.custommodifier.CustomModifierScreen
+import com.supercompose.simple.draggable.DraggableMusicKnobScreen
 import com.tutorial.supercompose.difftest.CoilTestScreen
 import com.tutorial.supercompose.home.HomeScreen
 import com.tutorial.supercompose.instagram.InstagramProfileScreen
@@ -20,7 +22,6 @@ import com.tutorial.supercompose.simple.*
 import com.tutorial.supercompose.simple.animatedsplash.AnimatedSplashScreen
 import com.tutorial.supercompose.simple.animation.*
 import com.tutorial.supercompose.simple.bottomnavigation.BottomNavigationWithBadgesScreen
-import com.supercompose.simple.draggable.DraggableMusicKnobScreen
 import com.tutorial.supercompose.simple.navigation.NavigationTheme
 import com.tutorial.supercompose.themes.ui.ComposeThemesScreen
 
@@ -195,6 +196,11 @@ fun NavigationComponent(navController: NavHostController) {
             route = Screen.ShimmerTextAnimation.route
         ) {
             ShimmerTextAnimationScreen()
+        }
+        composable(
+            route = Screen.CustomModifier.route
+        ) {
+            CustomModifierScreen()
         }
     }
 }

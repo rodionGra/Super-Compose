@@ -87,6 +87,7 @@ class ComposeThemesRepository @Inject constructor(
             ComposeTheme.Topic(19F, "Complex Animations With MotionLayout", Screen.MotionLayout),
             ComposeTheme.Topic(20F, "Instagram Ui Profile", Screen.InstagramProfile),
             ComposeTheme.Topic(21F, "Pagination", Screen.PaginationScreen),
+            ComposeTheme.Topic(22F, "Custom Modifier", Screen.CustomModifier)
         )
     )
 

@@ -56,6 +56,7 @@ sealed class Screen(
     object InstagramProfile : Screen("InstagramProfile")
     object PlaceHolderAnimationScreen : Screen("PlaceHolderAnimationScreen")
     object PaginationScreen : Screen("PaginationScreen")
+    object CustomModifier : Screen("CustomModifier")
 
     @Deprecated("all args should be not null")
     fun withArgs(vararg args: String): String {
