@@ -57,6 +57,7 @@ sealed class Screen(
     object PlaceHolderAnimationScreen : Screen("PlaceHolderAnimationScreen")
     object PaginationScreen : Screen("PaginationScreen")
     object CustomModifier : Screen("CustomModifier")
+    object TextFieldStateManagerScreen : Screen("TextFieldStateManagerScreen")
 
     @Deprecated("all args should be not null")
     fun withArgs(vararg args: String): String {

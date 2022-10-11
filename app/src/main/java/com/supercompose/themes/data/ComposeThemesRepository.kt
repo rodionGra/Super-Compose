@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.themes.data
+package com.supercompose.themes.data
 
 import com.tutorial.supercompose.navigation.Screen
 import com.tutorial.supercompose.themes.ui.entity.ComposeTheme
@@ -87,7 +87,12 @@ class ComposeThemesRepository @Inject constructor(
             ComposeTheme.Topic(19F, "Complex Animations With MotionLayout", Screen.MotionLayout),
             ComposeTheme.Topic(20F, "Instagram Ui Profile", Screen.InstagramProfile),
             ComposeTheme.Topic(21F, "Pagination", Screen.PaginationScreen),
-            ComposeTheme.Topic(22F, "Custom Modifier", Screen.CustomModifier)
+            ComposeTheme.Topic(22F, "Custom Modifier", Screen.CustomModifier),
+            ComposeTheme.Topic(
+                22F,
+                "Effective state management for TextField in Compose",
+                Screen.TextFieldStateManagerScreen
+            )
         )
     )
 
