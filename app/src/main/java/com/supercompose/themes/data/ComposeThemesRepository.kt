@@ -1,6 +1,6 @@
 package com.supercompose.themes.data
 
-import com.tutorial.supercompose.navigation.Screen
+import com.supercompose.navigation.Screen
 import com.tutorial.supercompose.themes.ui.entity.ComposeTheme
 import javax.inject.Inject
 
@@ -92,7 +92,12 @@ class ComposeThemesRepository @Inject constructor(
                 22F,
                 "Effective state management for TextField in Compose",
                 Screen.TextFieldStateManagerScreen
-            )
+            ),
+            ComposeTheme.Topic(
+                23F,
+                "Dynamic base url from annotation",
+                Screen.DynamicBaseUrlScreen
+            ),
         )
     )
 

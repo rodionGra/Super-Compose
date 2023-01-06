@@ -11,37 +11,22 @@ import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
+import com.supercompose.navigation.Screen
+import com.supercompose.network.multiplebaseurl.ui.DynamicBaseUrlScreen
 import com.supercompose.simple.ImageCardScreen
 import com.supercompose.simple.custommodifier.CustomModifierScreen
 import com.supercompose.simple.draggable.DraggableMusicKnobScreen
 import com.supercompose.simple.signup.TextFieldStateManagerScreen
+import com.supercompose.themes.ui.ComposeThemesScreen
 import com.tutorial.supercompose.difftest.CoilTestScreen
 import com.tutorial.supercompose.home.HomeScreen
 import com.tutorial.supercompose.instagram.InstagramProfileScreen
 import com.tutorial.supercompose.pagination.presentation.PaginationScreen
-import com.tutorial.supercompose.simple.CancelableSnackbar
-import com.tutorial.supercompose.simple.CancelableSnackbar2
-import com.tutorial.supercompose.simple.CircularProgressBarScreen
-import com.tutorial.supercompose.simple.ConstraintLayoutComposeScreen
-import com.tutorial.supercompose.simple.LazyColumnExample
-import com.tutorial.supercompose.simple.Modifiers
-import com.tutorial.supercompose.simple.MotionLayoutScreen
-import com.tutorial.supercompose.simple.NotLazyColumn
-import com.tutorial.supercompose.simple.RowColumnsBasicSizing
-import com.tutorial.supercompose.simple.ShowTextScaffold
-import com.tutorial.supercompose.simple.StateScreen
-import com.tutorial.supercompose.simple.StylingTextScreen
+import com.tutorial.supercompose.simple.*
 import com.tutorial.supercompose.simple.animatedsplash.AnimatedSplashScreen
-import com.tutorial.supercompose.simple.animation.InfiniteColorTransition
-import com.tutorial.supercompose.simple.animation.KeyFramesAnimation
-import com.tutorial.supercompose.simple.animation.PlaceholderAnimationScreen
-import com.tutorial.supercompose.simple.animation.RotateAnimationScreen
-import com.tutorial.supercompose.simple.animation.ShimmerTextAnimationScreen
-import com.tutorial.supercompose.simple.animation.SpringAnimation
-import com.tutorial.supercompose.simple.animation.TweenAnimation
+import com.tutorial.supercompose.simple.animation.*
 import com.tutorial.supercompose.simple.bottomnavigation.BottomNavigationWithBadgesScreen
 import com.tutorial.supercompose.simple.navigation.NavigationTheme
-import com.tutorial.supercompose.themes.ui.ComposeThemesScreen
 
 @ExperimentalMotionApi
 @ExperimentalAnimationApi
@@ -224,6 +209,11 @@ fun NavigationComponent(navController: NavHostController) {
             route = Screen.TextFieldStateManagerScreen.route
         ) {
             TextFieldStateManagerScreen(hiltViewModel())
+        }
+        composable(
+            route = Screen.DynamicBaseUrlScreen.route
+        ) {
+            DynamicBaseUrlScreen(hiltViewModel())
         }
     }
 }

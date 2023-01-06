@@ -1,6 +1,6 @@
 package com.tutorial.supercompose.themes.ui.entity
 
-import com.tutorial.supercompose.navigation.Screen
+import com.supercompose.navigation.Screen
 
 sealed class ComposeTheme(
     open val id: Float,

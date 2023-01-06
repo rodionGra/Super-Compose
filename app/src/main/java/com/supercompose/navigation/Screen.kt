@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.navigation
+package com.supercompose.navigation
 
 sealed class Screen(
     open val route: String
@@ -58,6 +58,7 @@ sealed class Screen(
     object PaginationScreen : Screen("PaginationScreen")
     object CustomModifier : Screen("CustomModifier")
     object TextFieldStateManagerScreen : Screen("TextFieldStateManagerScreen")
+    object DynamicBaseUrlScreen : Screen("DynamicBaseUrlScreen")
 
     @Deprecated("all args should be not null")
     fun withArgs(vararg args: String): String {
