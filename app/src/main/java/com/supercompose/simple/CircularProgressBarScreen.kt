@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.simple
+package com.supercompose.simple
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween

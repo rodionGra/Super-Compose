@@ -13,10 +13,12 @@ import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.supercompose.navigation.Screen
 import com.supercompose.network.multiplebaseurl.ui.DynamicBaseUrlScreen
+import com.supercompose.simple.CircularProgressBarScreen
 import com.supercompose.simple.ImageCardScreen
 import com.supercompose.simple.custommodifier.CustomModifierScreen
 import com.supercompose.simple.draggable.DraggableMusicKnobScreen
 import com.supercompose.simple.signup.TextFieldStateManagerScreen
+import com.supercompose.simple.swipetodismiss.SwipeToDismissScreen
 import com.supercompose.themes.ui.ComposeThemesScreen
 import com.tutorial.supercompose.difftest.CoilTestScreen
 import com.tutorial.supercompose.home.HomeScreen
@@ -74,6 +76,11 @@ fun NavigationComponent(navController: NavHostController) {
             route = Screen.LazyColumn.route
         ) {
             LazyColumnExample()
+        }
+        composable(
+            route = Screen.SwipeToDismiss.route
+        ) {
+            SwipeToDismissScreen()
         }
         composable(
             route = Screen.ImageCard.route

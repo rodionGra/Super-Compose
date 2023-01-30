@@ -36,6 +36,7 @@ class ComposeThemesRepository @Inject constructor(
                 listOf(
                     ComposeTheme.Topic(9.1F, "NotLazyColumn", Screen.NotLazyColumn),
                     ComposeTheme.Topic(9.2F, "LazyColumn", Screen.LazyColumn),
+                    ComposeTheme.Topic(9.3F, "SwipeToDismiss", Screen.SwipeToDismiss),
                 )
             ),
             ComposeTheme.Topic(
