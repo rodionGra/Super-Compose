@@ -7,7 +7,7 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material.Scaffold
 import androidx.constraintlayout.compose.ExperimentalMotionApi
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
-import com.tutorial.supercompose.navigation.NavigationComponent
+import com.supercompose.navigation.NavigationComponent
 import com.tutorial.supercompose.ui.theme.SuperComposeTheme
 import dagger.hilt.android.AndroidEntryPoint
 

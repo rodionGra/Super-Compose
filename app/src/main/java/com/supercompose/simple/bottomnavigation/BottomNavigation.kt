@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.simple.bottomnavigation
+package com.supercompose.simple.bottomnavigation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

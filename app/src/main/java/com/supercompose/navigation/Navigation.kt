@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.navigation
+package com.supercompose.navigation
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.slideInVertically
@@ -27,7 +27,7 @@ import com.tutorial.supercompose.pagination.presentation.PaginationScreen
 import com.tutorial.supercompose.simple.*
 import com.tutorial.supercompose.simple.animatedsplash.AnimatedSplashScreen
 import com.tutorial.supercompose.simple.animation.*
-import com.tutorial.supercompose.simple.bottomnavigation.BottomNavigationWithBadgesScreen
+import com.supercompose.simple.bottomnavigation.BottomNavigationWithBadgesScreen
 import com.tutorial.supercompose.simple.navigation.NavigationTheme
 
 @ExperimentalMotionApi

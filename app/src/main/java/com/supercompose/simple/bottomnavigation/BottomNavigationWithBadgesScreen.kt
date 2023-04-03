@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.simple.bottomnavigation
+package com.supercompose.simple.bottomnavigation
 
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Scaffold
