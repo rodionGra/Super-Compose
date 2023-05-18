@@ -11,10 +11,10 @@ import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
-import com.supercompose.navigation.Screen
 import com.supercompose.network.multiplebaseurl.ui.DynamicBaseUrlScreen
 import com.supercompose.simple.CircularProgressBarScreen
 import com.supercompose.simple.ImageCardScreen
+import com.supercompose.simple.StylingTextScreen
 import com.supercompose.simple.custommodifier.CustomModifierScreen
 import com.supercompose.simple.draggable.DraggableMusicKnobScreen
 import com.supercompose.simple.signup.TextFieldStateManagerScreen
