@@ -14,6 +14,8 @@ import com.google.accompanist.navigation.animation.composable
 import com.supercompose.network.multiplebaseurl.ui.DynamicBaseUrlScreen
 import com.supercompose.simple.CircularProgressBarScreen
 import com.supercompose.simple.ImageCardScreen
+import com.supercompose.simple.LazyColumnExample
+import com.supercompose.simple.LazyRowExample
 import com.supercompose.simple.StylingTextScreen
 import com.supercompose.simple.custommodifier.CustomModifierScreen
 import com.supercompose.simple.draggable.DraggableMusicKnobScreen
@@ -68,9 +70,9 @@ fun NavigationComponent(navController: NavHostController) {
             RowColumnsBasicSizing()
         }
         composable(
-            route = Screen.NotLazyColumn.route
+            route = Screen.LazyRow.route
         ) {
-            NotLazyColumn()
+            LazyRowExample()
         }
         composable(
             route = Screen.LazyColumn.route

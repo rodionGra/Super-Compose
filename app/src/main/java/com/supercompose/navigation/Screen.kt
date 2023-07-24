@@ -30,7 +30,7 @@ sealed class Screen(
 
     object CoilScreen : Screen("coilScreen")
 
-    object NotLazyColumn : Screen("notLazyColumn")
+    object LazyRow : Screen("LazyRow")
     object LazyColumn : Screen("lazyColumn")
     object SwipeToDismiss : Screen("SwipeToDismiss")
     object ImageCard : Screen("imageCard")
