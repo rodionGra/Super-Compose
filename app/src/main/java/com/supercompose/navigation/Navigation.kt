@@ -16,6 +16,8 @@ import com.supercompose.simple.CircularProgressBarScreen
 import com.supercompose.simple.ImageCardScreen
 import com.supercompose.simple.LazyColumnExample
 import com.supercompose.simple.LazyRowExample
+import com.supercompose.simple.Modifiers
+import com.supercompose.simple.StateScreen
 import com.supercompose.simple.StylingTextScreen
 import com.supercompose.simple.custommodifier.CustomModifierScreen
 import com.supercompose.simple.draggable.DraggableMusicKnobScreen

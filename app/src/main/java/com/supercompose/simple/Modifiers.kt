@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.simple
+package com.supercompose.simple
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

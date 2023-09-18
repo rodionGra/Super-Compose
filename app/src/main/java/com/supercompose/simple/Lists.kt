@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -84,9 +85,9 @@ fun LazyRowExample() {
                     if (it == 4) {
                         Box(
                             Modifier
-                                .fillParentMaxHeight(1F)
+                                .height(IntrinsicSize.Max)
                                 .width(200.dp)
-                                .background(Color.Red)
+                                .background(Color.Magenta)
                         ) {
                             Text(modifier = Modifier.align(Alignment.Center), text = it.toString())
                         }
@@ -135,7 +136,4 @@ fun LazyRowExample() {
             }
         }
     }
-
 }
-
-
