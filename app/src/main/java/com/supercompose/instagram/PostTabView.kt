@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.instagram
+package com.supercompose.instagram
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -11,7 +11,12 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.Icon
 import androidx.compose.material.Tab
 import androidx.compose.material.TabRow
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
@@ -26,7 +31,7 @@ fun PostTabView(
     onTabSelected: (selectedIndex: Int) -> Unit
 ) {
     var selectedTabIndex by remember {
-        mutableStateOf(0)
+        mutableIntStateOf(0)
     }
     val inactiveColor = Color(0xFF777777)
     TabRow(

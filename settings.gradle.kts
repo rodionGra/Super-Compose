@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Super-Compose"
-include ':app'
+include (":app")

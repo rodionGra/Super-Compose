@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -99,7 +100,7 @@ fun CustomLayoutPreview() {
                                 .padding(horizontal = 8.dp, vertical = 12.dp)
                         ) {
                             Text(
-                                text = it.toString(),
+                                text = LoremIpsum(it).values.first(),
                                 modifier = Modifier.align(Alignment.Center)
                             )
                         }

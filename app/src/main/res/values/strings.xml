@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Super Compose</string>
+    <string name="bolt_text_example"><b>Bolt</b> text</string>
 </resources>
