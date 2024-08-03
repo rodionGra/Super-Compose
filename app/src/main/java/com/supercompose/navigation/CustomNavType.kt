@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.navigation
+package com.supercompose.navigation
 
 /*
 class AssetParamType : NavType<ComposeTheme>(isNullableAllowed = true) {

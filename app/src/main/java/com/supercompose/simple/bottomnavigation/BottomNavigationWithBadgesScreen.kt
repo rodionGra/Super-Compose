@@ -1,7 +1,6 @@
 package com.supercompose.simple.bottomnavigation
 
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Scaffold
+import androidx.compose.material3.Scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
@@ -10,7 +9,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun BottomNavigationWithBadgesScreen() {
     val navController = rememberNavController()
@@ -38,7 +36,8 @@ fun BottomNavigationWithBadgesScreen() {
                 }
             )
         }
-    ) {
+    ) { padding ->
+        padding//TODO
         BottomNavigation(navController = navController)
     }
 }

@@ -13,7 +13,6 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.supercompose.R
-import com.tutorial.supercompose.instagram.StatSection
 
 @Composable
 fun ProfileSection(

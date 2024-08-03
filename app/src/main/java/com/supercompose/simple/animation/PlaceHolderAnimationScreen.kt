@@ -1,13 +1,13 @@
 @file:OptIn(ExperimentalAnimationApi::class)
 
-package com.tutorial.supercompose.simple.animation
+package com.supercompose.simple.animation
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier

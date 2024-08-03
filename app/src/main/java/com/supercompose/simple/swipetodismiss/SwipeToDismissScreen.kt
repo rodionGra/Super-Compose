@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterialApi::class, ExperimentalFoundationApi::class)
+@file:OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 
 package com.supercompose.simple.swipetodismiss
 
@@ -8,12 +8,10 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Done
-import androidx.compose.material3.Divider
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberUpdatedState
@@ -23,14 +21,15 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SwipeToDismissScreen() {
     Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(content = {
             items(count = 100, itemContent = { item ->
                 val currentItem by rememberUpdatedState(item)
-                val dismissState = rememberDismissState(
-                    confirmStateChange = {
+                val dismissState = rememberSwipeToDismissBoxState(
+                    confirmValueChange = {
                         //todo remove current item in viewModel
                         true
                     }
@@ -41,18 +40,17 @@ fun SwipeToDismissScreen() {
                  I personally think this can be made optional, with a blank body, but looks like it is needed.
                 *dismissContent — this is where we place the original Row item of the LazyColumn
                 */
-                SwipeToDismiss(
+                SwipeToDismissBox(
                     state = dismissState,
                     modifier = Modifier
                         .padding(vertical = 1.dp)
                         .animateItemPlacement(),
-                    background = {
+                    backgroundContent = {
                         SwipeBackground(dismissState)
-                    },
-                    dismissContent = {
-                        SwipeToDismissListItem(item = item)
                     }
-                )
+                ) {
+                    SwipeToDismissListItem(item = item)
+                }
             })
         })
     }
@@ -79,27 +77,28 @@ private fun SwipeToDismissListItem(item: Int) {
 }
 
 @Composable
-@OptIn(ExperimentalMaterialApi::class)
-private fun SwipeBackground(dismissState: DismissState) {
+private fun SwipeBackground(dismissState: SwipeToDismissBoxState) {
     val direction = dismissState.dismissDirection ?: return
 
     val color by animateColorAsState(
         when (dismissState.targetValue) {
-            DismissValue.Default -> Color.LightGray
-            DismissValue.DismissedToEnd -> Color.Green
-            DismissValue.DismissedToStart -> Color.Red
+            SwipeToDismissBoxValue.StartToEnd -> Color.LightGray
+            SwipeToDismissBoxValue.EndToStart -> Color.Green
+            SwipeToDismissBoxValue.Settled -> Color.Red
         }
     )
     val alignment = when (direction) {
-        DismissDirection.StartToEnd -> Alignment.CenterStart
-        DismissDirection.EndToStart -> Alignment.CenterEnd
+        SwipeToDismissBoxValue.StartToEnd -> Alignment.CenterStart
+        SwipeToDismissBoxValue.EndToStart -> Alignment.CenterEnd
+        SwipeToDismissBoxValue.Settled -> TODO()
     }
     val icon = when (direction) {
-        DismissDirection.StartToEnd -> Icons.Default.Done
-        DismissDirection.EndToStart -> Icons.Default.Delete
+        SwipeToDismissBoxValue.StartToEnd -> Icons.Default.Done
+        SwipeToDismissBoxValue.EndToStart -> Icons.Default.Delete
+        SwipeToDismissBoxValue.Settled -> TODO()
     }
     val scale by animateFloatAsState(
-        if (dismissState.targetValue == DismissValue.Default) 0.75f else 1f
+        if (dismissState.targetValue == SwipeToDismissBoxValue.Settled) 0.75f else 1f
     )
 
     Box(

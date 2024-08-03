@@ -1,7 +1,7 @@
 package com.supercompose.themes.data
 
 import com.supercompose.navigation.Screen
-import com.tutorial.supercompose.themes.ui.entity.ComposeTheme
+import com.supercompose.themes.ui.entity.ComposeTheme
 import javax.inject.Inject
 
 class ComposeThemesRepository @Inject constructor(

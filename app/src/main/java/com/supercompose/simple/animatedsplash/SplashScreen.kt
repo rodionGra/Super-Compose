@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.simple.animatedsplash
+package com.supercompose.simple.animatedsplash
 
 import android.view.animation.OvershootInterpolator
 import androidx.compose.animation.core.Animatable

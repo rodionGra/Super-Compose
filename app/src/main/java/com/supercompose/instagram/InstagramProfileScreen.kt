@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.instagram
+package com.supercompose.instagram
 
 import androidx.compose.runtime.Composable
 import com.supercompose.instagram.ProfileScreen

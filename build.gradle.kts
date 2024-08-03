@@ -1,31 +1,22 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.ksp) apply false
+}
+
 buildscript {
     val compose_version by extra("1.5.0-beta03")
-    val compose_compiler_version by extra("1.5.0")
-    val kotlin_version by extra("1.9.0")
+    val compose_compiler_version by extra("1.9.0")
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.4.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
-
-        //hilt
-        classpath("com.google.dagger:hilt-android-gradle-plugin:2.47")
-
-        //serialization
-        classpath("org.jetbrains.kotlin:kotlin-serialization:$kotlin_version")
+        classpath(libs.android.gradlePlugin)
+        classpath(libs.kotlin.gradlePlugin)
     }
 }
-
-/*tasks.create<Delete>("clean") {
-    delete(rootProject.buildDir)
-}
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
-}*/
 
 subprojects {
     tasks

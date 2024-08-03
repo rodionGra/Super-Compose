@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.pagination.tool
+package com.supercompose.pagination.tool
 
 interface Paginator<Item> {
     suspend fun loadNextItems()

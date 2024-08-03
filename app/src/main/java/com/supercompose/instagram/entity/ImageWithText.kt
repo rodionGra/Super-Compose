@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.instagram.entity
+package com.supercompose.instagram.entity
 
 import androidx.compose.ui.graphics.painter.Painter
 

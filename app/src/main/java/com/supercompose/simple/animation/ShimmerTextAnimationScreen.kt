@@ -1,10 +1,10 @@
-package com.tutorial.supercompose.simple.animation
+package com.supercompose.simple.animation
 
 import android.util.Log
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Text
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

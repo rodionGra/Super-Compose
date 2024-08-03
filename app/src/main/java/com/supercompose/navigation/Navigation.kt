@@ -11,30 +11,41 @@ import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
+import com.supercompose.difftest.CoilTestScreen
+import com.supercompose.home.HomeScreen
+import com.supercompose.instagram.InstagramProfileScreen
 import com.supercompose.network.multiplebaseurl.ui.DynamicBaseUrlScreen
+import com.supercompose.pagination.presentation.PaginationScreen
+import com.supercompose.simple.CancelableSnackbar
+import com.supercompose.simple.CancelableSnackbar2
 import com.supercompose.simple.CircularProgressBarScreen
+import com.supercompose.simple.ConstraintLayoutComposeScreen
 import com.supercompose.simple.ImageCardScreen
 import com.supercompose.simple.LazyColumnExample
 import com.supercompose.simple.LazyRowExample
 import com.supercompose.simple.Modifiers
+import com.supercompose.simple.MotionLayoutScreen
+import com.supercompose.simple.RowColumnsBasicSizing
+import com.supercompose.simple.ShowTextScaffold
 import com.supercompose.simple.StateScreen
 import com.supercompose.simple.StylingTextScreen
+import com.supercompose.simple.animatedsplash.AnimatedSplashScreen
+import com.supercompose.simple.animation.InfiniteColorTransition
+import com.supercompose.simple.animation.KeyFramesAnimation
+import com.supercompose.simple.animation.PlaceholderAnimationScreen
+import com.supercompose.simple.animation.RotateAnimationScreen
+import com.supercompose.simple.animation.ShimmerTextAnimationScreen
+import com.supercompose.simple.animation.SpringAnimation
+import com.supercompose.simple.animation.TweenAnimation
+import com.supercompose.simple.bottomnavigation.BottomNavigationWithBadgesScreen
 import com.supercompose.simple.custommodifier.CustomModifierScreen
 import com.supercompose.simple.draggable.DraggableMusicKnobScreen
+import com.supercompose.simple.navigation.NavigationTheme
 import com.supercompose.simple.signup.TextFieldStateManagerScreen
 import com.supercompose.simple.swipetodismiss.SwipeToDismissScreen
 import com.supercompose.themes.ui.ComposeThemesScreen
-import com.tutorial.supercompose.difftest.CoilTestScreen
-import com.tutorial.supercompose.home.HomeScreen
-import com.tutorial.supercompose.instagram.InstagramProfileScreen
-import com.tutorial.supercompose.pagination.presentation.PaginationScreen
-import com.tutorial.supercompose.simple.*
-import com.tutorial.supercompose.simple.animatedsplash.AnimatedSplashScreen
-import com.tutorial.supercompose.simple.animation.*
-import com.supercompose.simple.bottomnavigation.BottomNavigationWithBadgesScreen
-import com.tutorial.supercompose.simple.navigation.NavigationTheme
 
-@ExperimentalMotionApi
+@OptIn(ExperimentalMotionApi::class)
 @ExperimentalAnimationApi
 @Composable
 fun NavigationComponent(navController: NavHostController) {

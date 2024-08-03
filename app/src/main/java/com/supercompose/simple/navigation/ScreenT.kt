@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.simple.navigation
+package com.supercompose.simple.navigation
 
 sealed class ScreenT(val route: String) {
     object MainScreenT : ScreenT("main_screen")

@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.pagination.data
+package com.supercompose.pagination.data
 
 import kotlinx.coroutines.delay
 

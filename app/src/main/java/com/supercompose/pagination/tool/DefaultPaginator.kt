@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.pagination.tool
+package com.supercompose.pagination.tool
 
 class DefaultPaginator<Key, Item>(
     private val initialKey: Key,

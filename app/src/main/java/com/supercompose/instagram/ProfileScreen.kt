@@ -6,8 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.supercompose.R
-import com.tutorial.supercompose.instagram.*
-import com.tutorial.supercompose.instagram.entity.ImageWithText
+import com.supercompose.instagram.entity.ImageWithText
 
 @Composable
 fun ProfileScreen() {

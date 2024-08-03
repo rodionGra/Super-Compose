@@ -1,7 +1,7 @@
-package com.tutorial.supercompose.simple
+package com.supercompose.simple
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -17,17 +17,18 @@ fun ShowTextSnackBar(text: String) {
 
 @Composable
 fun ShowTextScaffold() {
-    val scaffoldState = rememberScaffoldState()
+    val snackbarHostState = remember { SnackbarHostState() }
     var textFieldState by remember { mutableStateOf("") }
     val scope = rememberCoroutineScope()
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        scaffoldState = scaffoldState
-    ) {
+        snackbarHost = { SnackbarHost(snackbarHostState) },
+    ) { innerPadding ->
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
             modifier = Modifier
+                .padding(innerPadding)
                 .fillMaxSize()
                 .padding(horizontal = 30.dp)
         ) {
@@ -44,7 +45,7 @@ fun ShowTextScaffold() {
             )
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = {
-                scope.launch { scaffoldState.snackbarHostState.showSnackbar("Hello $textFieldState") }
+                scope.launch { snackbarHostState.showSnackbar("Hello $textFieldState") }
             }) {
                 Text("Plz greet me")
             }

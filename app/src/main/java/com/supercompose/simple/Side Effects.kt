@@ -1,13 +1,14 @@
-package com.tutorial.supercompose.simple
+package com.supercompose.simple
 
 import android.util.Log
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.OnBackPressedDispatcher
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Button
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.rememberScaffoldState
+import androidx.compose.material3.Button
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import kotlinx.coroutines.delay
@@ -40,19 +41,20 @@ fun MyComposable(backPressedDispatcher: OnBackPressedDispatcher) {
 
 @Composable
 fun CancelableSnackbar() {
-    val scaffoldState = rememberScaffoldState()
+    val snackbarHostState = remember { SnackbarHostState() }
+
     rememberCoroutineScope()
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        scaffoldState = scaffoldState
+        snackbarHost = { SnackbarHost(snackbarHostState) },
     ) {
         it //todo
         var counter by remember {
             mutableStateOf(0)
         }
         if (counter % 5 == 0 && counter > 0) {
-            LaunchedEffect(key1 = scaffoldState.snackbarHostState) {
-                scaffoldState.snackbarHostState.showSnackbar("Hello")
+            LaunchedEffect(key1 = snackbarHostState.currentSnackbarData) {
+                snackbarHostState.showSnackbar("Hello")
             }
         }
         Button(onClick = { counter++ }) {
@@ -70,11 +72,12 @@ fun CancelableSnackbar() {
 
 @Composable
 fun CancelableSnackbar2() {
-    val scaffoldState = rememberScaffoldState()
+    val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        scaffoldState = scaffoldState
+        snackbarHost = { SnackbarHost(snackbarHostState) },
     ) {
         it //todo
         val counter = produceState(initialValue = 0) {
@@ -82,8 +85,8 @@ fun CancelableSnackbar2() {
             value = 4
         }
         if (counter.value % 5 == 0 && counter.value > 0) {
-            LaunchedEffect(key1 = scaffoldState.snackbarHostState) {
-                scaffoldState.snackbarHostState.showSnackbar("Hello")
+            LaunchedEffect(key1 = snackbarHostState.currentSnackbarData) {
+                snackbarHostState.showSnackbar("Hello")
             }
         }
         Button(onClick = { }) {

@@ -6,9 +6,10 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -22,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.supercompose.navigation.Screen
-import com.tutorial.supercompose.themes.ui.entity.ComposeTheme
+import com.supercompose.themes.ui.entity.ComposeTheme
 
 @Composable
 fun ComposeThemesScreen(
@@ -84,7 +85,9 @@ fun Content(
                             navController.navigate(route)
                         },
                     shape = MaterialTheme.shapes.medium,
-                    elevation = 4.dp
+                    elevation = CardDefaults.cardElevation(
+                        defaultElevation = 4.dp
+                    )
                 ) {
                     Text(
                         modifier = Modifier.padding(vertical = 8.dp),

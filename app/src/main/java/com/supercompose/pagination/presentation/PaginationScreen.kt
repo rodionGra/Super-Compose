@@ -1,17 +1,19 @@
-package com.tutorial.supercompose.pagination.presentation
+package com.supercompose.pagination.presentation
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.Card
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Text
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CardElevation
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.tutorial.supercompose.pagination.data.ListItem
+import com.supercompose.pagination.data.ListItem
 
 @Composable
 fun PaginationScreen(viewModel: PaginationViewModel) {
@@ -52,7 +54,9 @@ fun Item(
     modifier: Modifier = Modifier,
     item: ListItem
 ) {
-    Card(elevation = 8.dp) {
+    Card(elevation = CardDefaults.cardElevation(
+        defaultElevation = 8.dp
+    )) {
         Column(
             modifier = modifier
                 .fillMaxWidth()

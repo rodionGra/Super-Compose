@@ -1,12 +1,12 @@
-package com.tutorial.supercompose.pagination.presentation
+package com.supercompose.pagination.presentation
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.tutorial.supercompose.pagination.data.Repository
-import com.tutorial.supercompose.pagination.tool.DefaultPaginator
+import com.supercompose.pagination.data.Repository
+import com.supercompose.pagination.tool.DefaultPaginator
 import kotlinx.coroutines.launch
 
 class PaginationViewModel : ViewModel() {

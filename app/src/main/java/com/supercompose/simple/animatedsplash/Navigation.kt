@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.simple.animatedsplash
+package com.supercompose.simple.animatedsplash
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost

@@ -1,6 +1,7 @@
-package com.tutorial.supercompose.pagination.presentation
+package com.supercompose.pagination.presentation
 
-import com.tutorial.supercompose.pagination.data.ListItem
+import com.supercompose.pagination.data.ListItem
+
 
 data class PaginationScreenState(
     val isLoading: Boolean = false,

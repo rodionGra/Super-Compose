@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.pagination.data
+package com.supercompose.pagination.data
 
 data class ListItem(
     val title: String,

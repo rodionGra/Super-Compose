@@ -3,7 +3,7 @@ package com.supercompose.themes.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.supercompose.themes.data.ComposeThemesRepository
-import com.tutorial.supercompose.themes.ui.entity.ComposeTheme
+import com.supercompose.themes.ui.entity.ComposeTheme
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

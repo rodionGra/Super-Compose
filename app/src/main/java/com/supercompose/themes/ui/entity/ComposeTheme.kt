@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.themes.ui.entity
+package com.supercompose.themes.ui.entity
 
 import com.supercompose.navigation.Screen
 

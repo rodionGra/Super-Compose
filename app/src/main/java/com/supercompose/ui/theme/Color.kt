@@ -1,4 +1,4 @@
-package com.tutorial.supercompose.ui.theme
+package com.supercompose.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
