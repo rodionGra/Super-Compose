@@ -1,6 +1,5 @@
 [versions]
 accompanist = "0.34.0"
-accompanistNavigationAnimation = "0.31.5-beta"
 androidDesugarJdkLibs = "2.0.4"
 # AGP and tools should be updated together
 androidGradlePlugin = "8.4.2"
@@ -20,7 +19,7 @@ constraintlayoutCompose = "1.0.1"
 hiltAndroidGradlePlugin = "2.51.1"
 kotlinSerialization = "2.0.0"
 androidxMetrics = "1.0.0-beta01"
-androidxNavigation = "2.8.0-beta06"
+androidxNavigation = "2.8.0-beta07"
 coil = "2.6.0"
 hilt = "2.51.1"
 hiltExt = "1.2.0"
@@ -39,7 +38,6 @@ androidx-compose-ui-test = ["androidx-compose-ui-test", "androidx-compose-ui-tes
 
 [libraries]
 accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
-accompanist-navigation-animation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanistNavigationAnimation" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }

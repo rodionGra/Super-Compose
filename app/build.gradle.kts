@@ -12,7 +12,7 @@ val compose_version = rootProject.extra["compose_version"]
 val compose_compiler_version = rootProject.extra["compose_compiler_version"] as String
 
 android {
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.tutorial.supercompose"
@@ -90,9 +90,6 @@ dependencies {
 
     // Compose ConstraintLayout
     implementation(libs.androidx.constraintlayout.compose)
-
-    // Compose Animation
-    implementation(libs.accompanist.navigation.animation)
 
     // Network
     implementation(libs.retrofit.core)
