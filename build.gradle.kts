@@ -6,8 +6,6 @@ plugins {
 }
 
 buildscript {
-    val compose_version by extra("1.5.0-beta03")
-    val compose_compiler_version by extra("1.9.0")
     repositories {
         google()
         mavenCentral()
@@ -18,7 +16,7 @@ buildscript {
     }
 }
 
-subprojects {
+/*subprojects {
     tasks
         .withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>()
         .configureEach {
@@ -45,4 +43,4 @@ subprojects {
                 }
             }
         }
-}
+}*/

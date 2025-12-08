@@ -32,6 +32,7 @@ sealed class Screen(
 
     object LazyRow : Screen("LazyRow")
     object LazyColumn : Screen("lazyColumn")
+    object LazyGridWithHeader : Screen("LazyGridWithHeader")
     object SwipeToDismiss : Screen("SwipeToDismiss")
     object ImageCard : Screen("imageCard")
     object StylingText : Screen("stylingText")

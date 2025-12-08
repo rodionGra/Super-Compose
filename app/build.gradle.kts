@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -8,16 +10,15 @@ plugins {
     alias(libs.plugins.hilt)
 }
 
-val compose_version = rootProject.extra["compose_version"]
-val compose_compiler_version = rootProject.extra["compose_compiler_version"] as String
-
 android {
-    compileSdk = 35
+    namespace = "com.supercompose"
+
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.tutorial.supercompose"
         minSdk = 26
-        targetSdk = 33
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -30,35 +31,36 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
+            /*proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
-            )
+            )*/
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlin {
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_17
+        }
     }
     kotlinOptions {
-        jvmTarget = "11"
         // useIR = true
     }
     buildFeatures {
         compose = true
     }
-    composeOptions {
+    /*composeOptions {
         kotlinCompilerExtensionVersion = compose_compiler_version
-    }
-    packagingOptions {
+    }*/
+    /*packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
-    }
-    namespace = "com.supercompose"
+    }*/
 }
-
-extra["versionStr"] = "1.3.1"
 
 dependencies {
     implementation(libs.androidx.core.ktx)
@@ -81,10 +83,11 @@ dependencies {
 
     // Compose
     implementation(libs.androidx.compose.bom)
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.compose.material.icons.core)
 
     // Material
     implementation (libs.material)
-    implementation(libs.androidx.compose.material.iconsExtended)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material3.navigationSuite)
 

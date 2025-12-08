@@ -37,6 +37,7 @@ class ComposeThemesRepository @Inject constructor(
                     ComposeTheme.Topic(9.1F, "LazyRow", Screen.LazyRow),
                     ComposeTheme.Topic(9.2F, "LazyColumn", Screen.LazyColumn),
                     ComposeTheme.Topic(9.3F, "SwipeToDismiss", Screen.SwipeToDismiss),
+                    ComposeTheme.Topic(9.3F, "LazyGrid with header", Screen.LazyGridWithHeader),
                 )
             ),
             ComposeTheme.Topic(

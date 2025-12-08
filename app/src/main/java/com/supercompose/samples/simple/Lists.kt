@@ -1,5 +1,6 @@
 package com.supercompose.samples.simple
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -15,6 +16,7 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -25,10 +27,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlin.random.Random
 
+val list = MutableList(100) { index ->
+    index
+}.toList()
+
 @Composable
 fun LazyColumnExample() {
     LazyColumn {
-        itemsIndexed(
+        /*itemsIndexed(
             items = listOf("This", "is", "jetpack", "compose", "!!!")
         ) { index, item ->
             Text(
@@ -48,25 +54,42 @@ fun LazyColumnExample() {
                     .padding(24.dp)
             )
         }
-        items(5000) {
-            Text(
-                text = "Item = $it",
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(
-                        Color(
-                            Random.nextInt(from = 0, until = 256),
-                            Random.nextInt(),
-                            Random.nextInt()
-                        )
-                    )
-                    .padding(24.dp)
-            )
+*/
+        itemsIndexed(
+            items = list,
+            key = { index, key ->
+                key
+            }
+        ) { index, it ->
+            ColoredText(it.toString())
         }
     }
+}
+
+@Composable
+fun ColoredText(
+    text: String,
+    modifier: Modifier = Modifier
+) {
+    SideEffect {
+        Log.d("DEBUG_TAG", "LazyColumnExample: item = $text")
+    }
+    Text(
+        text = "Item = $text",
+        fontSize = 24.sp,
+        fontWeight = FontWeight.Bold,
+        textAlign = TextAlign.Center,
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                Color(
+                    Random.nextInt(from = 0, until = 256),
+                    Random.nextInt(),
+                    Random.nextInt()
+                )
+            )
+            .padding(24.dp)
+    )
 }
 
 @Composable

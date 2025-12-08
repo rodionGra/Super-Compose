@@ -66,12 +66,13 @@ fun Spinner(apiType: ApiType, items: List<DeploymentType>, onClick: (DeploymentT
         modifier = Modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center
     ) {
-        Row(Modifier
-            .padding(24.dp)
-            .clickable {
-                expanded = !expanded
-            }
-            .padding(8.dp),
+        Row(
+            Modifier
+                .padding(24.dp)
+                .clickable {
+                    expanded = !expanded
+                }
+                .padding(8.dp),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {

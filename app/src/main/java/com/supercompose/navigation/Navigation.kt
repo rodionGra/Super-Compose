@@ -22,6 +22,7 @@ import com.supercompose.samples.simple.CircularProgressBarScreen
 import com.supercompose.samples.simple.ConstraintLayoutComposeScreen
 import com.supercompose.samples.simple.ImageCardScreen
 import com.supercompose.samples.simple.LazyColumnExample
+import com.supercompose.samples.simple.LazyGridExample
 import com.supercompose.samples.simple.LazyRowExample
 import com.supercompose.samples.simple.Modifiers
 import com.supercompose.samples.simple.MotionLayoutScreen
@@ -91,6 +92,11 @@ fun NavigationComponent(navController: NavHostController) {
             route = Screen.LazyColumn.route
         ) {
             LazyColumnExample()
+        }
+        composable(
+            route = Screen.LazyGridWithHeader.route
+        ) {
+            LazyGridExample()
         }
         composable(
             route = Screen.SwipeToDismiss.route

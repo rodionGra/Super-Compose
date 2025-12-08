@@ -43,8 +43,7 @@ fun SwipeToDismissScreen() {
                 SwipeToDismissBox(
                     state = dismissState,
                     modifier = Modifier
-                        .padding(vertical = 1.dp)
-                        .animateItemPlacement(),
+                        .padding(vertical = 1.dp),
                     backgroundContent = {
                         SwipeBackground(dismissState)
                     }
@@ -109,7 +108,7 @@ private fun SwipeBackground(dismissState: SwipeToDismissBoxState) {
         contentAlignment = alignment
     ) {
         Icon(
-            icon,
+            imageVector = icon,
             contentDescription = "Localized description",
             modifier = Modifier.scale(scale)
         )
